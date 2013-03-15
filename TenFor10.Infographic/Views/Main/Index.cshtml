@@ -1,0 +1,232 @@
+﻿@using System.Web.Optimization
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html lang="en"> <!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+    <title>TenFor10</title>
+    <meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <link href='http://fonts.googleapis.com/css?family=Knewave' rel='stylesheet' type='text/css'>
+   
+	@Styles.Render("~/content/css")
+	
+    
+    <!--[if lt IE 9]>
+	    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="knewave">
+
+<div id="wrapper">
+	<div id="header" class="grid-container">
+    	<div class="row">
+            <span class="span20">
+                <h1 class="title">Water World<br />Day <span class="c-black">2013</span></h1>
+                <p class="intro">
+                    <span class="rotate"><span class="c-black">Donate</span> Water</span><br /> for africa
+                    <span class="c-black">& <br /> help us reach our<br /> goal:</span>
+                    <span id="count"></span> <span class="c-black">/</span> 
+                    <small>
+                        <span id="total"></span>
+                        <small class="c-black">people</small>
+                    </small>
+                </p>
+            </span>
+        </div>
+    </div>
+	<div id="mainContent" class="grid-container">
+		<!--<div id="tmpDust"></div>
+		<h1 id="goal">goal <span class="c-black">reached!</span></h1> -->
+		
+	</div>
+	
+	<script type="text/x-template" id="building-list-item-template">
+	  
+		<p>{name}</p>
+	 
+	</script>
+	<footer id="footer" class="grid-container">
+    	<div class="row">
+        	<span class="span1 icon-man"></span>
+           	<span class="span4">= 5 people</span>
+            <span class="span2"><span class="icon-star imgCenter"></span></span>
+            <span class="span7">
+    			<a href="www.tenfor10.org" title="tenfor10">WWW.TENFOR10.ORG</a>            
+        	</span>
+            <span class="span4 move2">
+            	<img class="fl" src="assets/images/logo-debc.png" alt="debc" />
+                <img class="fr" src="assets/images/logo-tenforten.png" alt="ten for ten" />
+            </span>
+        </div>
+    </footer>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/scripts/plugins/jquery-1.9.1.min.js">\x3C/script>')</script>
+	@Scripts.Render("~/bundles/main")	
+	
+	<script>  
+		
+		var goal = 365;
+		var signups = 1;
+		var signupsPerIcon = 5;
+		var iconsPerRow = 20;
+		var numberOfRows = Math.ceil( (goal / signupsPerIcon) / iconsPerRow); 
+		
+		// Set goal
+		$("#total").html(goal);
+		$("#count").html(signups);
+											 
+		for (var i = 1; i <= numberOfRows; i++) {	 
+			rowDiv=document.createElement('div');
+			$(rowDiv).addClass("row");
+
+			iconsPerRow = 	i == numberOfRows ?
+							Math.ceil((goal - signupsPerIcon * iconsPerRow * (numberOfRows - 1))/signupsPerIcon)
+							: iconsPerRow;
+	
+			for (var j = 1; j <= iconsPerRow; j++) {
+				iconDiv=document.createElement('div');
+				$(iconDiv).addClass("span1").addClass(isOdd(j) == true ? "icon-man" : "icon-women").appendTo($(rowDiv));
+			}
+
+			$(rowDiv).appendTo($("#mainContent"));
+		 }
+		
+		var seconds = 5;
+		
+
+		setInterval(function() {
+			$.get('signups.txt', function(data) {
+				fillPeople(data);
+			});
+		}, seconds * 1000);
+		
+
+		function fillPeople(signups) {
+			var iconsToFill = Math.ceil(signups / 5);
+			//alert(iconsToFill);
+			var className = "";
+			
+			if (iconsToFill < 1) {
+				switch (signups) {
+				case 1:
+					className = "full-1";
+					break;
+				case 2:
+					className = "full-2";
+					break;
+				case 3:
+					className = "full-3";
+					break;
+				case 4:
+					className = "full-4";
+					break;
+				case 5:
+					className = "full";
+					break;
+				}
+			} else {
+				var icons = signups - (iconsToFill * signupsPerIcon) +  signupsPerIcon;
+				//alert(icons);
+				switch(icons) {
+				  case 1:
+					className = "full-1";
+					break;
+				  case 2:
+					className = "full-2";
+					break;
+				  case 3:
+					className = "full-3";
+					break;
+				  case 4:
+					className = "full-4";
+					break;
+				  case 5:
+					className = "full";
+					break;
+				}
+			}
+
+			//alert($(".heartbeat"));
+			//if ($(".heartbeat").length > 0) {
+				
+
+			//} else {
+				//alert(iconsToFill);
+				var fullRange = iconsToFill - 1;
+				$(".span1:lt(" + fullRange+")").addClass("full");
+				$(".span1:eq(" + fullRange + ")").addClass(className).addClass("heartbeat");
+			//}
+
+			//return className + " heartbeat";
+		} 
+		 
+		function isOdd(num) { return (num % 2) == 1;}
+ 
+		//alert(numberOfRows);
+		//alert(remainder);
+
+		// DUST
+		//var tpl = dust.compile("Omg {#people} {.} {/people} are here! {>partial/}", "tpl");
+		//var partial = dust.compile("I'm a partial but I've already been included so things still run {how}", "partial");
+		//dust.loadSource(tpl);
+		//dust.loadSource(partial);
+
+		//var data = {
+		//	people: ["jim", "jane", "jack", "julie"],
+		//	how: "synchronously!"
+		//};
+
+		//var result;
+		//dust.render("tpl", data, function(err, res) { 
+		//	result = res;
+		//});
+		//console.log(result);u+
+
+
+		// compile the template
+		//var buildingTemplate = dust.compile($("#building-list-item-template").html(),"tpl");
+
+		// load the compiled template into the dust template cache
+		//dust.loadSource(buildingTemplate);
+
+		// create a function that takes the data object
+		// in this case it's a 'building' object
+		//var template = function(building) {	
+		  //var result;	
+		  //dust.render("tpl", building, function(err, res) {
+			//result = res;
+		  //});	
+		 // return result;
+		//};
+
+		//create a data object that the template will render
+		//var building = {	
+		  //id: 1,
+		  //name: "Empire State Building"
+		//};
+
+		// append the template to it's host container
+		//$("#tmpDust").html(template(building));
+		
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+﻿/*==========================
+Site Name: 
+Author: Michael De Leon
+
+
+1. CSS RESET
+2. DEFAULT STYLES
+3. EXTENTION STYLES
+4. HEADER
+5. MAIN NAVIGATION
+6. BREAD CRUMB
+7. MAIN CONTENT
+8. FOOTER
+9. COLUMNS
+10.MEDIA QUERIES
+11.CSS3 ANIMATIONS
+12.PLUGINS
+13.PRINT STYLES
+
+==========================*/
+
+
+
+/*==========================
+1.      CSS RESET
+==========================*/
+
+
+/*==========================
+2.		DEFAULT STYLES
+==========================*/
+
+body     {background:#12a2d6 url(../images/bg-site.png) repeat 0px 0px;color:#fff;font-family:sans-serif;font-size:12px;}
+a{color:#fff;text-decoration:none;}
+a:visited{color:#551a8b;}
+a:hover{color:#fff;text-decoration:underline;}
+a:focus{outline:thin dotted;}
+a:hover, a:active { outline: 0; }
+p        {line-height:100%;}
+h1,h2,h3,h4,h5,h6{line-height:100%;}
+h1       {color:#fff; font-size:93px; margin-bottom:10px;}
+h2       {color:#666666; font-size:18px; margin-bottom:5px;}
+h2 span  {color:#000; font-size:15px;}
+h3       {color:#333333; font-size:14px; margin-bottom:5px;}
+h3 span  {color:#000; font-size:12px;}
+h4       {color:#333333; font-size:12px; margin-bottom:5px;}
+h4 span  {color:#000; font-size:12px;}
+h5       {color:#333333; font-size:12px; margin-bottom:5px;}
+h5 span  {color:#000; font-size:12px;}
+h6       {color:#0769cd; font-size:12px; margin-bottom:5px;}
+h6 span  {color:#000; font-size:12px;}
+
+.knewave{font-family: 'Knewave', cursive;text-transform:uppercase;}
+.c-black{color:#000;}
+
+/* FORMS */
+form{}
+form > div,
+form .column2A > div,
+form .column2B > div {margin-bottom:10px;overflow:hidden;}
+input[type=text],
+input[type=password],
+textarea{border:1px solid #9c9c9c;padding:3px 5px;min-width:200px;}
+select{border:1px solid #9c9c9c;width:200px;}
+input.error,
+textarea.error,
+select.error{background-color:#ffdede;border-color:#cf0000;}
+label{color:#999999;display:block;font-size:12px;font-weight:bold;margin-bottom:5px;vertical-align:top;}
+label span{color:#4e8abe;vertical-align:top;}
+
+input:valid,textarea:valid{}
+input:invalid,textarea:invalid{background-color:#f0dddd;}
+
+/*==========================
+3.	 EXTENTION STYLES
+==========================*/
+
+.testBorder       {border:1px solid red !important;}
+.ir{background-repeat:no-repeat;direction:ltr;display:block;overflow:hidden;text-indent:-999em;text-align:left;}
+.hidden			  {display:none;visibility:hidden;} 
+.visuallyhidden	  {position:absolute !important;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);}
+.invisible		  {visibility:hidden;}
+.clearfix:before,
+.clearfix:after	  {content:"\0020";display:block;height:0;visibility:hidden;} 
+.clearfix:after	  {clear:both;}
+.clearfix		  {zoom: 1;}
+.clear			  {clear:both;}
+.fl               {float:left;}
+.fr               {float:right;}
+.bulletList       {margin-left:30px; margin-bottom:10px;}
+.bulletList li    {list-style-type:disc; margin-bottom:2px;}
+.dBlock, .show    {display:block;}
+.dNone, .hide     {display:none;}
+.imgBorder        {border:1px solid #CCCCCC;}
+.error            {color:#FF0000;}
+.imgLeft		  {float:left;margin:0px 10px 10px 0px;}
+.imgRight		  {float:right;margin:0px 0px 10px 10px;}
+.imgCenter,	.center{margin:0px auto;display:block !important;}
+.taLeft			  {text-align:left;}
+.taRight		  {text-align:right;}
+.taCenter         {text-align:center;}
+.taJustify        {text-align:justify;}
+
+.icon-man{background: url(../images/icon-man.png) no-repeat center center;display:inline-block;height:58px;width:30px;}
+.icon-women{background: url(../images/icon-women.png) no-repeat center center;display:inline-block;height:58px;width:30px;}
+.icon-star{background: url(../images/icon-star.png) no-repeat center center;display:inline-block;height:31px;width:32px;}
+
+/*==========================
+4.   HEADER
+==========================*/
+
+#header{margin-top:50px;margin-bottom:70px;position:relative;}
+#header .title{
+	margin:0px;
+	transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);}
+#header .intro{
+	float:right;
+	font-size:40px;
+	line-height:120%;
+	position:absolute;
+	margin:0px;
+	right:0px;
+	text-align:right;
+	top:0px;}
+#header .intro .rotate{
+	display:inline-block;
+	transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);}
+#header .intro > small{float:right;font-size:30px;line-height:45%;}
+#header .intro small span{display:block;height:33px;line-height:100%;}
+#header .intro small small{font-size:18px;}
+  
+/*==========================
+5.   MAIN NAVIGATION
+==========================*/
+
+#mainNav{
+	
+}
+
+/*==========================
+6.   BREAD CRUMB
+==========================*/
+
+#breadCrumb{
+	
+}
+
+/*==========================
+7.   MAIN CONTENT
+==========================*/
+
+#mainContent{
+	position:relative;
+}
+#mainContent #goal{position:absolute;text-align:center;width:85%;z-index:100;}
+
+#mainContent .icon-man,
+#mainContent .icon-women{opacity:.08;}
+#mainContent .icon-man.full-1,
+#mainContent .icon-women.full-1{opacity:.2;}
+#mainContent .icon-man.full-2,
+#mainContent .icon-women.full-2{opacity:.4;}
+#mainContent .icon-man.full-3,
+#mainContent .icon-women.full-3{opacity:.6;}
+#mainContent .icon-man.full-4,
+#mainContent .icon-women.full-4{opacity:.8;}
+#mainContent .icon-man.full,
+#mainContent .icon-women.full{opacity:1;}
+
+/*==========================
+8.   FOOTER
+==========================*/
+
+#footer{font-size:30px;margin-top:30px;}
+#footer .row{line-height:200%;}
+#footer .icon-star{margin-top:15px;}
+       
+/*==========================
+9.	 COLUMNS
+==========================*/
+
+.column2A, .column2B{width:45%;}
+.column2A{float:left;}
+.column2B{float:right;}
+
+.column{float:left;}
+.column.last{float:right;}
+.size1-4{width:25%;}
+.size2-4{width:50%;}
+.size3-4{width:75%;}
+.size4-4{width:100%;}
+.size1-3{width:33.333%;}
+.size2-3{width:66.666%;}
+.size3-3{width:100%;}
+
+/*==========================
+10.   MEDIA QUERIES
+==========================*/
+
+@media only screen and (min-width: 480px) {
+/* Style adjustments for viewports 480px and over go here */
+}
+ 
+@media only screen and (min-width: 768px) {
+/* Style adjustments for viewports 768px and over go here */
+}
+
+/*==========================
+11.   CSS 3 ANIMATIONS
+==========================*/
+
+.heartbeat{
+	-webkit-backface-visibility: hidden;
+	position:relative;
+	animation: heartbeat 4.5s ease-in-out;
+	-moz-animation: heartbeat 4.5s ease-in-out; /* Firefox */
+	-webkit-animation: heartbeat 4.5s ease-in-out; /* Safari and Chrome */
+	-o-animation: heartbeat 4.5s ease-in-out; /* Opera */}
+
+@keyframes heartbeat
+{
+0% {transform:scale3d(1.2,1.2,1);}
+8% {transform:scale3d(1.3,1.3,1);}
+15%	{transform:scale3d(1,1,1);}
+20% {transform:scale3d(1.2,1.2,1);}
+28% {transform:scale3d(1.3,1.3,1);}
+35% {transform:scale3d(1,1,1);}
+40% {transform:scale3d(1.2,1.2,1);}
+48% {transform:scale3d(1.3,1.3,1);}
+55% {transform:scale3d(1,1,1);}
+60% {transform:scale3d(1.2,1.2,1);}
+68% {transform:scale3d(1.3,1.3,1);}
+75% {transform:scale3d(1,1,1);}
+80% {transform:scale3d(1.2,1.2,1);}
+88% {transform:scale3d(1.3,1.3,1);}
+100% {transform:scale3d(1,1,1);}
+}
+
+@-moz-keyframes heartbeat /* Firefox */
+{
+0% {-moz-transform:scale3d(1.2,1.2,1);}
+8% {-moz-transform:scale3d(1.3,1.3,1);}
+15%	{-moz-transform:scale3d(1,1,1);}
+20% {-moz-transform:scale3d(1.2,1.2,1);}
+28% {-moz-transform:scale3d(1.3,1.3,1);}
+35% {-moz-transform:scale3d(1,1,1);}
+40% {-moz-transform:scale3d(1.2,1.2,1);}
+48% {-moz-transform:scale3d(1.3,1.3,1);}
+55% {-moz-transform:scale3d(1,1,1);}
+60% {-moz-transform:scale3d(1.2,1.2,1);}
+68% {-moz-transform:scale3d(1.3,1.3,1);}
+75% {-moz-transform:scale3d(1,1,1);}
+80% {-moz-transform:scale3d(1.2,1.2,1);}
+88% {-moz-transform:scale3d(1.3,1.3,1);}
+100% {-moz-transform:scale3d(1,1,1);}
+}
+
+@-webkit-keyframes heartbeat /* Safari and Chrome */
+{
+0% {-webkit-transform:scale3d(1.2,1.2,1);}
+8% {-webkit-transform:scale3d(1.3,1.3,1);}
+15%	{-webkit-transform:scale3d(1,1,1);}
+20% {-webkit-transform:scale3d(1.2,1.2,1);}
+28% {-webkit-transform:scale3d(1.3,1.3,1);}
+35% {-webkit-transform:scale3d(1,1,1);}
+40% {-webkit-transform:scale3d(1.2,1.2,1);}
+48% {-webkit-transform:scale3d(1.3,1.3,1);}
+55% {-webkit-transform:scale3d(1,1,1);}
+60% {-webkit-transform:scale3d(1.2,1.2,1);}
+68% {-webkit-transform:scale3d(1.3,1.3,1);}
+75% {-webkit-transform:scale3d(1,1,1);}
+80% {-webkit-transform:scale3d(1.2,1.2,1);}
+88% {-webkit-transform:scale3d(1.3,1.3,1);}
+100% {-webkit-transform:scale3d(1,1,1);}
+}
+
+@-o-keyframes heartbeat /* Opera */
+{
+0% {-o-transform:scale3d(1.2,1.2,1);}
+8% {-o-transform:scale3d(1.3,1.3,1);}
+15%	{-o-transform:scale3d(1,1,1);}
+20% {-o-transform:scale3d(1.2,1.2,1);}
+28% {-o-transform:scale3d(1.3,1.3,1);}
+35% {-o-transform:scale3d(1,1,1);}
+40% {-o-transform:scale3d(1.2,1.2,1);}
+48% {-o-transform:scale3d(1.3,1.3,1);}
+55% {-o-transform:scale3d(1,1,1);}
+60% {-o-transform:scale3d(1.2,1.2,1);}
+68% {-o-transform:scale3d(1.3,1.3,1);}
+75% {-o-transform:scale3d(1,1,1);}
+80% {-o-transform:scale3d(1.2,1.2,1);}
+88% {-o-transform:scale3d(1.3,1.3,1);}
+100% {-o-transform:scale3d(1,1,1);}
+}
+
+/*==========================
+12.   PLUGINS
+==========================*/
+
+/*==========================
+13.   PRINT STYLES
+==========================*/
+/**
+* Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+* http://html5boilerplate.com/
+*/
+@media print {
+* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+-ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+a, a:visited { color: #444 !important; text-decoration: underline; }
+a[href]:after { content: " (" attr(href) ")"; }
+abbr[title]:after { content: " (" attr(title) ")"; }
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+tr, img { page-break-inside: avoid; }
+@page { margin: 0.5cm; }
+p, h2, h3 { orphans: 3; widows: 3; }
+h2, h3{ page-break-after: avoid; }
+}
