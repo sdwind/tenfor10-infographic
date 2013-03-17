@@ -10,10 +10,15 @@ namespace TenFor10.Infographic
 				.Include("~/assets/styles/normalize.css")
 				.Include("~/assets/styles/main.css"));
 
+			bundles.Add(new StyleBundle("~/content/admincss").Include("~/assets/styles/admin.css"));
+			
 			bundles.Add(new ScriptBundle("~/bundles/main")
-				.Include("~/assets/scripts/main.js")
-				.Include("~/assets/scripts/dust-full-0.3.0.min.js"));
-		
+				.Include("~/assets/scripts/main.js"));
+
+			bundles.Add(new ScriptBundle("~/bundles/js")
+				            .Include("~/assets/scripts/plugins/jquery-*")
+							.Include("~/assets/scripts/plugins/jquery.*"));
+
 		}
 	}
 }

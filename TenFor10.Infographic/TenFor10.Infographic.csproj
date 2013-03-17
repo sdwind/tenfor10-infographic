@@ -113,16 +113,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\InfographicSettingsModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="assets\scripts\plugins\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="assets\scripts\plugins\jquery.validate.min.js" />
+    <Content Include="assets\scripts\plugins\jquery.validate.unobtrusive.min.js" />
+    <Content Include="assets\styles\admin.css" />
     <Content Include="signups.txt" />
     <Content Include="assets\images\bg-site.png" />
     <Content Include="assets\images\icon-man.png" />
@@ -130,8 +137,6 @@
     <Content Include="assets\images\icon-women.png" />
     <Content Include="assets\images\logo-debc.png" />
     <Content Include="assets\images\logo-tenforten.png" />
-    <Content Include="assets\scripts\dust-core-0.3.0.min.js" />
-    <Content Include="assets\scripts\dust-full-0.3.0.min.js" />
     <Content Include="assets\scripts\main.js" />
     <Content Include="assets\scripts\plugins\html5.js" />
     <Content Include="assets\scripts\plugins\jquery-1.9.1.min.js" />
@@ -151,7 +156,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -159,7 +163,10 @@
   <ItemGroup>
     <None Include="assets\styles\grid\grid-settings.less" />
     <None Include="assets\styles\grid\grid.less" />
+    <None Include="Views\Admin\Index.cshtml" />
+    <None Include="Views\Admin\Login.cshtml" />
     <None Include="Views\Main\Index.cshtml" />
+    <None Include="Views\Shared\AdminMaster.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

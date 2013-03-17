@@ -1,0 +1,147 @@
+﻿html {
+    background-color: #e2e2e2;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    border-top: solid 10px #01478c;
+    color: #333;
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#body {
+    background-color: #efeeef;
+    clear: both;
+    padding-bottom: 35px;
+}
+
+    .main-content {
+		padding-left: 10px;
+        padding-top: 3px;
+    }
+
+
+/* forms */
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+    fieldset legend {
+        display: none;
+    }
+    
+    fieldset ol {
+        padding: 0;
+        list-style: none;
+    }
+
+        fieldset ol li {
+            padding-bottom: 5px;
+        }
+	 
+	fieldset label {
+        display: block;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    fieldset label.checkbox {
+        display: inline;
+    }
+
+    fieldset input[type="text"],
+    fieldset input[type="password"],
+    fieldset input[type="email"],
+    fieldset input[type="number"],
+    fieldset select {
+        border: 1px solid #e2e2e2;
+        color: #333;
+        font-size: 1.0em;
+        margin: 5px 0 6px 0;
+        padding: 5px;
+        width: 300px;
+    }
+
+	fieldset input.filter {
+        width: 200px;
+	}
+	fieldset input.date {
+        width: 100px;
+	}
+
+	fieldset input[type="text"].zip {
+        width: 100px;
+	}
+	
+	fieldset select.gender {
+        width: 100px;
+	}
+
+        fieldset input[type="text"]:focus,
+        fieldset input[type="password"]:focus {
+            border: 1px solid #7ac0da;
+        }
+
+    fieldset input[type="submit"],
+	fieldset input[type="reset"],
+	fieldset input[type="button"] {
+        background-color: #d3dce0;
+        border: 1px solid #787878;
+        cursor: pointer;
+        font-size: .9em;
+        font-weight: 600;
+        padding: 5px;
+	    width: 100px;
+    }
+
+	.display-field label { display: inline;}
+
+/* styles for validation helpers */
+.field-validation-error 
+{
+    margin: 2px 5px 0 2px;
+    padding: 1px;
+    border: 1px solid #cd0a0a; 
+    background: #fef1ec url(../../images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x; color: #cd0a0a; 
+    color: #cd0a0a;
+    -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; -khtml-border-top-left-radius: 5px; border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; -khtml-border-top-right-radius: 5px; border-top-right-radius: 5px; 
+    -moz-border-radius-bottomleft: 5px; -webkit -border-bottom-left-radius: 5px; -khtml-border-bottom-left-radius: 5px; border-bottom-left-radius: 5px; 
+    -moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; -khtml-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px; 
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input[type="text"].input-validation-error,
+input[type="password"].input-validation-error {
+    /*border: 1px solid #e80c4d;*/
+}
+
+.validation-summary-errors {
+    padding:5px;
+    border: 1px solid #cd0a0a; 
+    background: #fef1ec url(../../images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x; color: #cd0a0a; 
+    color: #cd0a0a;
+    -moz-border-radius-toplef0t: 5px; -webkit-border-top-left-radius: 5px; -khtml-border-top-left-radius: 5px; border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; -khtml-border-top-right-radius: 5px; border-top-right-radius: 5px; 
+    -moz-border-radius-bottomleft: 5px; -webkit -border-bottom-left-radius: 5px; -khtml-border-bottom-left-radius: 5px; border-bottom-left-radius: 5px; 
+    -moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; -khtml-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px; 
+}
+.validation-summary-valid {
+    display: none;
+}
+

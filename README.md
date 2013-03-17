@@ -1,2 +1,0 @@
-tenfor10-infographic
-====================
