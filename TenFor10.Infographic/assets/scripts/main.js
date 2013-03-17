@@ -4,14 +4,19 @@ $(function () {
 
 var site = (function () {
 	var seconds = 5;
-	var goal = 365;
-	var signupsPerIcon = 5;
-	var iconsPerRow = 20;
+	var goal;
+	var signupsPerIcon;
+	var iconsPerRow;
 	var signups;
-	var numberOfRows = Math.ceil((goal / signupsPerIcon) / iconsPerRow);
+	var numberOfRows;
 
-	return {
-		init: function () {
+	var initializeDisplay = function (data) {
+		if (data) {
+			goal = data.Goal;
+			signupsPerIcon = data.SignUpsPerIcon;
+			iconsPerRow = data.IconsPerRow;
+			signups = data.SignUps ? data.SignUps : 0;
+			numberOfRows = Math.ceil((goal / signupsPerIcon) / iconsPerRow);
 
 			// initiliaze view
 			$("#total").html(goal);
@@ -33,31 +38,43 @@ var site = (function () {
 				}
 
 				$(rowDiv).appendTo($("#mainContent"));
-
-				// Get signups on initial load
-				$.get('signups.txt', function (data) {
-					site.updateIcons(data);
-				});
 			}
 
 			site.getSignups();
+		}
+	};
+
+	return {
+		init: function () {
+			site.getInfographicData(initializeDisplay);
 		},
 		getSignups: function () {
 			setInterval(function () {
-				$.get('signups.txt', function (data) {
-					site.updateIcons(data);
-				});
+				site.getInfographicData(site.updateIcons);
 			}, seconds * 1000);
 		},
-
+		getInfographicData: function (callback) {
+			$.getJSON('signups.txt', function (data) {
+				callback(data);
+			}).error(function (jqXHR, textStatus, errorThrown) {
+				alert(jqXHR.status);
+				alert(textStatus);
+				alert(errorThrown);
+			});
+		},
 		isOdd: function (num) {
 			return (num % 2) == 1;
 		},
-		updateIcons: function (signups) {
+		updateIcons: function (data) {
+			if (data.SignUps) {
+				signups = data.SignUps > goal ? goal : data.SignUps;
+			} else {
+				signups = 0;
+			}
+			
 			var iconsToFill = Math.ceil(signups / 5);
 			var currentClassName;
 			var newClassName = "";
-			signups = signups > goal ? goal : signups;
 
 			// Update goal with current number of signups
 			$("#count").html(signups);
@@ -79,6 +96,9 @@ var site = (function () {
 						break;
 					case 5:
 						newClassName = "full";
+						break;
+					case 0:
+						newClassName = "";
 						break;
 				}
 			} else {
@@ -104,12 +124,12 @@ var site = (function () {
 
 			currentClassName = newClassName;
 
-			var fullRange = iconsToFill - 1;
+			var fullRange = iconsToFill == 0 ? iconsToFill : iconsToFill - 1;
 			$(".span1:lt(" + fullRange + ")").addClass("full");
 
 			// if goal reached, show message
 			if (signups >= goal) {
-				$(".full").removeClass("full").addClass("full-1");
+				$(".full").removeClass("[class^='full'']").addClass("full-1");
 				$("#goal").show();
 			} else {
 				// If number of signups changed since last check,

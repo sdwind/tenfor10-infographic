@@ -8,7 +8,7 @@ namespace TenFor10.Infographic.Models
 		[Display(Name = "Goal for event (in number of signups)")]
 		public int? Goal { get; set; }
 
-		[Display(Name = "Total signups for event")]
+		[Display(Name = "Total signups for event : (update this as signups come in)")]
 		public int? SignUps { get; set; }
 
 		[Required(ErrorMessage = "Required")]
@@ -18,5 +18,7 @@ namespace TenFor10.Infographic.Models
 		[Required(ErrorMessage = "Required")]
 		[Display(Name = "Number of icons per row")]
 		public int? IconsPerRow { get; set; }
+
+		public string Message { get; set; }
 	}
 }

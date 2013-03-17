@@ -30,7 +30,9 @@ body {
         padding-top: 3px;
     }
 
-
+h3 {
+	color: #7ac0da;
+}
 /* forms */
 fieldset {
     border: none;
@@ -143,5 +145,9 @@ input[type="password"].input-validation-error {
 }
 .validation-summary-valid {
     display: none;
+}
+
+.highlight {
+	color: blue;
 }
 

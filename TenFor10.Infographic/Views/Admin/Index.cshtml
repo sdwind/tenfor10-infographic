@@ -7,26 +7,27 @@
 <h2>Infographic Settings</h2> 
 @using (Html.BeginForm())
 {
+	<h3>@Model.Message</h3>
 	<fieldset>
-		  @Html.ValidationSummary(true, "Log in was unsuccessful. Please correct the errors and try again.") 
+		  @Html.ValidationSummary(true, "") 
 		<div class="editor-field">
-			@Html.LabelFor(m => m.Goal)	<br/>
+			@Html.LabelFor(m => m.Goal)
 			@Html.TextBoxFor(model => model.Goal)
 			@Html.ValidationMessageFor(model => model.Goal)
 		</div> 
 		<div class="editor-field">
-			@Html.LabelFor(m => m.SignUpsPerIcon) <br/>
+			@Html.LabelFor(m => m.SignUpsPerIcon)
 			@Html.TextBoxFor(model => model.SignUpsPerIcon)
 			@Html.ValidationMessageFor(model => model.SignUpsPerIcon)
 		</div> 
 		<div class="editor-field">
-			@Html.LabelFor(m => m.IconsPerRow)	<br/>
+			@Html.LabelFor(m => m.IconsPerRow)
 			@Html.TextBoxFor(model => model.IconsPerRow)
 			@Html.ValidationMessageFor(model => model.IconsPerRow)
 		</div> 	 
 		<hr/>
 		<div class="editor-field">
-			@Html.LabelFor(m => m.SignUps) <br/>
+			@Html.LabelFor(m => m.SignUps, new { @class="highlight"})
 			@Html.TextBoxFor(model => model.SignUps)
 			@Html.ValidationMessageFor(model => model.SignUps)
 		</div> 
