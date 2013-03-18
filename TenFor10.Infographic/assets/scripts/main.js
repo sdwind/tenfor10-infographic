@@ -3,7 +3,7 @@ $(function () {
 });
 
 var site = (function () {
-	var seconds = 5;
+	var seconds = 15;
 	var goal;
 	var signupsPerIcon;
 	var iconsPerRow;
@@ -129,7 +129,7 @@ var site = (function () {
 
 			// if goal reached, show message
 			if (signups >= goal) {
-				$(".full").removeClass("[class^='full'']").addClass("full-1");
+				$("div.span1").removeClass("full full-1 full-2 full-3 full-4").addClass("full-1");
 				$("#goal").show();
 			} else {
 				// If number of signups changed since last check,

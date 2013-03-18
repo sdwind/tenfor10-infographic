@@ -163,10 +163,18 @@
   <ItemGroup>
     <None Include="assets\styles\grid\grid-settings.less" />
     <None Include="assets\styles\grid\grid.less" />
-    <None Include="Views\Admin\Index.cshtml" />
-    <None Include="Views\Admin\Login.cshtml" />
-    <None Include="Views\Main\Index.cshtml" />
-    <None Include="Views\Shared\AdminMaster.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Admin\Login.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Main\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Shared\AdminMaster.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
