@@ -1,1 +1,1 @@
-{"Goal":365,"SignUps":null,"SignUpsPerIcon":5,"IconsPerRow":20,"Message":null}
+{"Goal":365,"SignUps":67,"SignUpsPerIcon":5,"IconsPerRow":20,"Message":null}

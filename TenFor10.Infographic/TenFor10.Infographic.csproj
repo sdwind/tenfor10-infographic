@@ -131,12 +131,24 @@
     <Content Include="assets\scripts\plugins\jquery.validate.unobtrusive.min.js" />
     <Content Include="assets\styles\admin.css" />
     <Content Include="signups.txt" />
-    <Content Include="assets\images\bg-site.png" />
-    <Content Include="assets\images\icon-man.png" />
-    <Content Include="assets\images\icon-star.png" />
-    <Content Include="assets\images\icon-women.png" />
-    <Content Include="assets\images\logo-debc.png" />
-    <Content Include="assets\images\logo-tenforten.png" />
+    <Content Include="assets\images\bg-site.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\icon-man.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\icon-star.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\icon-women.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\logo-debc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\logo-tenforten.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="assets\scripts\main.js" />
     <Content Include="assets\scripts\plugins\html5.js" />
     <Content Include="assets\scripts\plugins\jquery-1.9.1.min.js" />
@@ -194,8 +206,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49449</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://tenfor10.loca</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

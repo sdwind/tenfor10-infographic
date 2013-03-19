@@ -56,7 +56,7 @@ namespace TenFor10.Infographic.Controllers
 
 		private void UpdateJson(InfographicSettingsModel model)
 		{
-			using (var fs = System.IO.File.Open(Server.MapPath("signups.txt"), FileMode.Open))
+			using (var fs = System.IO.File.Open(Server.MapPath("signups.txt"), FileMode.Truncate))
 			using (var sw = new StreamWriter(fs))
 			using (JsonWriter jw = new JsonTextWriter(sw))
 			{

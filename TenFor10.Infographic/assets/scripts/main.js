@@ -10,7 +10,7 @@ var site = (function () {
 	var signups;
 	var numberOfRows;
 
-	var initializeDisplay = function (data) {
+	var initializeDisplay = function (data) { 
 		if (data) {
 			goal = data.Goal;
 			signupsPerIcon = data.SignUpsPerIcon;
@@ -45,7 +45,7 @@ var site = (function () {
 	};
 
 	return {
-		init: function () {
+		init: function () {	
 			site.getInfographicData(initializeDisplay);
 		},
 		getSignups: function () {
@@ -71,7 +71,7 @@ var site = (function () {
 			} else {
 				signups = 0;
 			}
-			
+
 			var iconsToFill = Math.ceil(signups / 5);
 			var currentClassName;
 			var newClassName = "";

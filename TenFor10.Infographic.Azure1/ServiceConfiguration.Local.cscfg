@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="TenFor10.Infographic.Azure1" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*">
+  <Role name="TenFor10.Infographic">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="suzanne" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEEObkdeqHZ2SQN8A0JwUyEEwDQYJKoZIhvcNAQEBBQAEggEAN6jTpwuhw1+bOXpnsSXayhikjo7Elye19Fh5Az4f+1T63ZeGZ//HXQs+D3i4WokN9QU8HiTiT32CVRye91Erz2GbdulMjOY0vB9f1+lDO45qVQogudEkXTi5p8jCY2gObu46RkOyshncj/b1JMbEMAXs1w5MCo0tuTsYa5PRziffPUkGMmFyxRVAAcilPlhSn1y86l5T+jlaYGd/hs2t2pUUKx0ixCByebpf6I4XDAgJ4iDdcdDV+3cFvPDSqeI7Skj4VQu9CwaCuPd9FakjH0Opx8pOnT6R4wjZJRvYBZCeRygHKOys8NdcGUSJ34/gFWM9I2wu0TXKgsJ/BRpRjDAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECM0SthI6ZgiDgBDqF8hVn1rxzC8+OizHnQYs" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-04-01T23:59:59.0000000-05:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="6603AD6C693CAD5181E647BACB73E2978A3EC263" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

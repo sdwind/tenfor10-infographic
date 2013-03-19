@@ -8,9 +8,9 @@
     <AzureEnableIntelliTrace>False</AzureEnableIntelliTrace>
     <AzureEnableProfiling>False</AzureEnableProfiling>
     <AzureEnableWebDeploy>False</AzureEnableWebDeploy>
-    <AzureStorageAccountName>tenfor10infographic</AzureStorageAccountName>
-    <AzureStorageAccountLabel>tenfor10infographic</AzureStorageAccountLabel>
-    <AzureDeploymentLabel>TenFor10.Infographic.Azure</AzureDeploymentLabel>
+    <AzureStorageAccountName>portalvhds25w0lfqlsw6zk</AzureStorageAccountName>
+    <AzureStorageAccountLabel>portalvhds25w0lfqlsw6zk</AzureStorageAccountLabel>
+    <AzureDeploymentLabel>TenFor10.Infographic.Azure1</AzureDeploymentLabel>
     <AzureSolutionConfiguration>Release</AzureSolutionConfiguration>
     <AzureServiceConfiguration>Cloud</AzureServiceConfiguration>
     <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>

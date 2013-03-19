@@ -30,7 +30,7 @@ Author: Michael De Leon
 2.		DEFAULT STYLES
 ==========================*/
 
-body     {background:#12a2d6 url(../images/bg-site.png) repeat 0px 0px;color:#fff;font-family:sans-serif;font-size:12px;}
+body     {background:#12a2d6 url(../assets/images/bg-site.png) repeat 0px 0px;color:#fff;font-family:sans-serif;font-size:12px;}
 a{color:#fff;text-decoration:none;}
 a:visited{color:#551a8b;}
 a:hover{color:#fff;text-decoration:underline;}
@@ -101,9 +101,9 @@ input:invalid,textarea:invalid{background-color:#f0dddd;}
 .taCenter         {text-align:center;}
 .taJustify        {text-align:justify;}
 
-.icon-man{background: url(../images/icon-man.png) no-repeat center center;display:inline-block;height:58px;width:30px;}
-.icon-women{background: url(../images/icon-women.png) no-repeat center center;display:inline-block;height:58px;width:30px;}
-.icon-star{background: url(../images/icon-star.png) no-repeat center center;display:inline-block;height:31px;width:32px;}
+.icon-man{background: url(../assets/images/icon-man.png) no-repeat center center;display:inline-block;height:58px;width:30px;}
+.icon-women{background: url(../assets/images/icon-women.png) no-repeat center center;display:inline-block;height:58px;width:30px;}
+.icon-star{background: url(../assets/images/icon-star.png) no-repeat center center;display:inline-block;height:31px;width:32px;}
 
 /*==========================
 4.   HEADER
